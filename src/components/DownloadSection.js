@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import styled from 'styled-components';
 import { BorderRadius, Breakpoints, Colors, Spacing, Typography } from '../constants/theme';
+import TelegramButton from './TelegramButton';
+import WaitlistForm from './WaitlistForm';
 
 const DownloadContainer = styled.section`
   padding: ${Spacing.xxl} 0;
@@ -218,9 +220,23 @@ const DownloadSection = () => {
           Use MintFace today and start collecting unique NFT avatars that express your digital identity.
         </SectionDescription>
 
-      
 
-     
+        <motion.div
+          variants={buttonVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}
+        >
+          <TelegramButton />
+        </motion.div>
+
+        <motion.div
+          variants={buttonVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+        >
+        </motion.div>
+
       </Content>
     </DownloadContainer>
   );

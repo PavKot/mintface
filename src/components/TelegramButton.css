@@ -1,0 +1,26 @@
+.telegram-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  background: linear-gradient(90deg, #229ED9 0%, #37b8f4 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: 2em;
+  box-shadow: 0 4px 16px rgba(34, 158, 217, 0.15);
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  cursor: pointer;
+}
+.telegram-btn:hover, .telegram-btn:focus {
+  background: linear-gradient(90deg, #37b8f4 0%, #229ED9 100%);
+  box-shadow: 0 6px 24px rgba(34, 158, 217, 0.25);
+  transform: translateY(-2px) scale(1.03);
+  text-decoration: none;
+}
+.telegram-icon {
+  margin-right: 0.5em;
+  vertical-align: middle;
+}

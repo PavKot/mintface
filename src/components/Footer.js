@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Breakpoints, Colors, Spacing, Typography } from '../constants/theme';
 
+
 const FooterContainer = styled.footer`
   background: ${Colors.surface};
   border-top: 1px solid ${Colors.border};
