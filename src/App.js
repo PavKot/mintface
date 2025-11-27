@@ -6,6 +6,7 @@ import DownloadSection from './components/DownloadSection';
 import FeaturesSection from './components/FeaturesSection';
 import Footer from './components/Footer';
 import HeroSection from './components/HeroSection';
+import PlatformsSection from './components/PlatformsSection';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
 import { Colors, Typography } from './constants/theme';
@@ -91,6 +92,7 @@ function App() {
             <FeaturesSection />
             <CollectionsSection />
             <AppPreviewSection />
+            <PlatformsSection />
             <DownloadSection />
             <Footer onNavigate={navigateToPage} />
           </MainContent>

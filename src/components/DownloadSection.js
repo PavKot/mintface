@@ -3,7 +3,6 @@ import { useInView } from 'react-intersection-observer';
 import styled from 'styled-components';
 import { BorderRadius, Breakpoints, Colors, Spacing, Typography } from '../constants/theme';
 import TelegramButton from './TelegramButton';
-import WaitlistForm from './WaitlistForm';
 
 const DownloadContainer = styled.section`
   padding: ${Spacing.xxl} 0;
@@ -242,4 +241,4 @@ const DownloadSection = () => {
   );
 };
 
-export default DownloadSection;
+export default DownloadSection; 

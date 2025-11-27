@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import TelegramButton from './TelegramButton';
-import WaitlistForm from './WaitlistForm';
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { BorderRadius, Breakpoints, Colors, Gradients, Spacing, Typography } from '../constants/theme';
 
@@ -206,42 +205,9 @@ const ScrollText = styled.div`
   letter-spacing: 1px;
 `;
 
-const ModalOverlay = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-`;
 
-const ModalContent = styled.div`
-  background: #fff;
-  border-radius: 2em;
-  padding: 2em 2.5em;
-  box-shadow: 0 8px 40px rgba(34,158,217,0.18);
-  min-width: 320px;
-  max-width: 90vw;
-  text-align: center;
-`;
-
-const CloseButton = styled.button`
-  position: absolute;
-  top: 1.5em;
-  right: 2em;
-  background: none;
-  border: none;
-  font-size: 1.5em;
-  color: #229ED9;
-  cursor: pointer;
-`;
 
 const HeroSection = () => {
-  const [showWaitlist, setShowWaitlist] = useState(false);
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -301,22 +267,12 @@ const HeroSection = () => {
             <SecondaryButton
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => setShowWaitlist(true)}
+              onClick={() => document.getElementById('platforms')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Join Waitlist
+              Download
             </SecondaryButton>
           </CTAButtons>
         </motion.div>
-
-        {showWaitlist && (
-          <ModalOverlay onClick={() => setShowWaitlist(false)}>
-            <ModalContent onClick={e => e.stopPropagation()}>
-              <CloseButton onClick={() => setShowWaitlist(false)} aria-label="Close">×</CloseButton>
-              <h2 style={{color:'#229ED9', marginBottom:'1em'}}>Join the Waitlist</h2>
-              <WaitlistForm />
-            </ModalContent>
-          </ModalOverlay>
-        )}
       </Content>
 
       <FloatingNFTs>
